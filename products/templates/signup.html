@@ -1,12 +1,9 @@
-{% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="{% static 'styles/main.css' %}">
-    <link rel="stylesheet" href="{% static 'styles/bootstrap/css/bootstrap.css' %}">
+{% extends "base.html" %}
+{% block title %} 
+Sign Up
+{% endblock %}
+
+{% block content %}
 <style>
     .form-container{
         width: 100%;
@@ -58,15 +55,7 @@
         font-weight: bold;
     }
 </style>
-</head>
-<body>
-     <nav class="nav">
-  <a class="nav-link active" aria-current="page" href="{% url 'index' %}">Home</a>
-  <a class="nav-link" href="{% url 'about' %}">About</a>
-  <a class="nav-link" href="{% url 'contact' %}">Contact</a>
-  <a class="nav-link" href="{% url 'gallery' %}">Gallery</a>
-  <a class="nav-link" href="{% url 'signup' %}">Sign Up</a>
-</nav>
+
 <div class="form-container">
 <h2 style="text-align: center;">Creat Account</h2>
 <form action="Create Account">
@@ -91,5 +80,4 @@
     <p class="footer-text">Already have an account?<a href="#">login</a></p>
 </form>
 </div>
-</body>
-</html>
+{% endblock %}

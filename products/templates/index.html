@@ -1,22 +1,8 @@
-{% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <link rel="stylesheet" href="{% static 'styles/main.css' %}">
-    <link rel="stylesheet" href="{% static 'styles/bootstrap/css/bootstrap.css' %}">
-</head>
-<body>
-    <nav class="nav">
-  <a class="nav-link active" aria-current="page" href="{% url 'index' %}">Home</a>
-  <a class="nav-link" href="{% url 'about' %}">About</a>
-  <a class="nav-link" href="{% url 'contact' %}">Contact</a>
-  <a class="nav-link" href="{% url 'gallery' %}">Gallery</a>
-  <a class="nav-link" href="{% url 'signup' %}">Sign Up</a>
-</nav>
+{% extends "base.html" %} 
+
+{% block title %} Home {% endblock %}
+
+{% block content %}
     <h2>Welcome to my shop</h2>
     <button class="btn btn-success">Read More</button>
-</body>
-</html>
+{% endblock %}
