@@ -9,17 +9,53 @@
     <link rel="stylesheet" href="{% static 'styles/bootstrap/css/bootstrap.css' %}">
 <style>
     .form-container{
-        width: 350px;
+        width: 100%;
+        max-width: 500px;
         background-color: white;
-        padding: 25px;
-        border-radius: 15px;
-        box-shadow: 20px;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(red, green, blue, alpha);
+        box-sizing: border-box;
+        margin: 40px auto;
+        border: 1px solid #e0e0e0;
     }
     .form-group{
        margin-bottom: 15px; 
+       margin-top: 20px;
+       font-weight: 100;
+       font-size: large;
+    }
+    input{
+       margin-top: 20px; 
+       padding: 5px;
+    }
+    button{
+        width: 100%;
+        padding: 14px;
+        background-color: blue;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    button :hover{
+        background-color: blanchedalmond;
+    }
+    .footer-text{
+        text-align: center;
+        margin-top: 20px;
+        font-size: 14px;
+        color: #666666;
+    }
+    .footer-text a:hover{
+        text-decoration: solid;
+        color: greenyellow;
     }
     label{
-        
+        font-weight: bold;
     }
 </style>
 </head>
@@ -32,7 +68,7 @@
   <a class="nav-link" href="{% url 'signup' %}">Sign Up</a>
 </nav>
 <div class="form-container">
-<h2>Creat Account</h2>
+<h2 style="text-align: center;">Creat Account</h2>
 <form action="Create Account">
     <div class="form-group">
         <label for="">Full Name</label><br>
@@ -51,8 +87,8 @@
         <input type="password" placeholder="Confirm Password" required>
     </div>
     <p>i agree to the Terms and Conditions</p>
-    <button>Sign Up</button>
-    <p>Already have an account?</p>
+    <button type="submit">Sign Up</button>
+    <p class="footer-text">Already have an account?<a href="#">login</a></p>
 </form>
 </div>
 </body>
